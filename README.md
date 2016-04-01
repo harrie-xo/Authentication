@@ -4,7 +4,9 @@ This package cover to Authentication any request before connecting to your API. 
 
 # How to use this package
 <?php
+
 namespace Signature\Authentication\Test;
+
 use Signature\Authentication\Authentication;
 use Signature\Authentication\Token;
 use Signature\Authentication\Request;
