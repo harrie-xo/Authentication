@@ -8,7 +8,9 @@ This package cover to Authentication any request before connecting to your API. 
 namespace Signature\Authentication\Test;
 
 use Signature\Authentication\Authentication;
+
 use Signature\Authentication\Token;
+
 use Signature\Authentication\Request;
 
 spl_autoload_extensions('.php');
@@ -20,7 +22,7 @@ $auth = new \Signature\Authentication\Authentication;
 
 $request = $auth->request('POST',  'site/api',  $data);
 
-$token = $auth->token('my_key',  'my-secret');
+$token = $auth->token('my_key',  '12345');
 
 $signed = $request->sign($token);
 
@@ -29,3 +31,6 @@ $integrated = array_merge($data,  $signed);
 //echo json_encode($integrated);
 
 var_dump($integrated);
+
+
+var_dump will present data as array.
